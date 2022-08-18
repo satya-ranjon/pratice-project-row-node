@@ -13,6 +13,11 @@ const data = require("./lib/data");
 // app object - module scaffolding
 const app = {};
 
+// -->: pore muca dibo :<--
+data.update("test", "newFile", { name: "Trishna", age: 19 }, (err, data) => {
+  console.log(data);
+});
+
 // configuration
 
 // create server

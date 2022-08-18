@@ -14,6 +14,7 @@ const data = require("./lib/data");
 const app = {};
 
 // configuration
+app.config = {};
 
 // create server
 app.createServer = () => {
