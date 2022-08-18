@@ -13,6 +13,11 @@ const data = require("./lib/data");
 // app object - module scaffolding
 const app = {};
 
+// -->: pore muca dibo :<--
+data.read("test", "newFile", { err, data }, (err) => {
+  console.log("error was " + err);
+});
+
 // configuration
 
 // create server

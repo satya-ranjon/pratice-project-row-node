@@ -13,6 +13,9 @@ const data = require("./lib/data");
 // app object - module scaffolding
 const app = {};
 
+// -->: pore muca dibo :<--
+data.create();
+
 // configuration
 
 // create server
