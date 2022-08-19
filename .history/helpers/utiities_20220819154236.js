@@ -36,7 +36,7 @@ utilities.hash = (str) => {
 };
 // > createRandom String string
 utilities.createRandomString = (stringlength) => {
-  let length = stringlength;
+  const length = stringlength;
   length =
     typeof stringlength === "number" && stringlength > 0 ? stringlength : false;
   if (length) {
@@ -50,7 +50,6 @@ utilities.createRandomString = (stringlength) => {
     }
     return output;
   }
-  return false;
 };
 // export module
 module.exports = utilities;

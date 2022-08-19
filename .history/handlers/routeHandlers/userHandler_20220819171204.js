@@ -173,7 +173,7 @@ handler._users.put = (requestProperties, callback) => {
                 user.lastName = lastName;
               }
               if (password) {
-                user.password = password;
+                user.firstName = password;
               }
               //> store the data in database
               data.update("users", phoneNum, user, (err) => {

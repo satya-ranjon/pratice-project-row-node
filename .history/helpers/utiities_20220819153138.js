@@ -7,7 +7,7 @@
 
 // dependencies
 const crypto = require("crypto");
-// ! module scaffolding
+// -->: module scaffolding
 const utilities = {};
 const enviromments = require("./environments");
 
@@ -35,22 +35,6 @@ utilities.hash = (str) => {
   }
 };
 // > createRandom String string
-utilities.createRandomString = (stringlength) => {
-  let length = stringlength;
-  length =
-    typeof stringlength === "number" && stringlength > 0 ? stringlength : false;
-  if (length) {
-    const possiblecharecters = "abcdefghijklmnopqrstuvwx1234567890";
-    let output = "";
-    for (let i = 1; i <= length; i += 1) {
-      const randomCharcter = possiblecharecters.charAt(
-        Math.floor(Math.random() * possiblecharecters.length)
-      );
-      output += randomCharcter;
-    }
-    return output;
-  }
-  return false;
-};
+utilities.createRandomString = (stringlength) => {};
 // export module
 module.exports = utilities;

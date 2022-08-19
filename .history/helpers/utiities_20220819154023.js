@@ -36,21 +36,13 @@ utilities.hash = (str) => {
 };
 // > createRandom String string
 utilities.createRandomString = (stringlength) => {
-  let length = stringlength;
+  const length = stringlength;
   length =
     typeof stringlength === "number" && stringlength > 0 ? stringlength : false;
   if (length) {
     const possiblecharecters = "abcdefghijklmnopqrstuvwx1234567890";
     let output = "";
-    for (let i = 1; i <= length; i += 1) {
-      const randomCharcter = possiblecharecters.charAt(
-        Math.floor(Math.random() * possiblecharecters.length)
-      );
-      output += randomCharcter;
-    }
-    return output;
   }
-  return false;
 };
 // export module
 module.exports = utilities;

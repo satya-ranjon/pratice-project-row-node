@@ -76,9 +76,7 @@ handler._users.post = (requestProperties, callback) => {
           }
         });
       } else {
-        callback(500, {
-          error: "There was a problem in server side ! This user alwardy exsit",
-        });
+        callback(500, { error: "There was a problem in server side !" });
       }
     });
   } else {
@@ -173,7 +171,7 @@ handler._users.put = (requestProperties, callback) => {
                 user.lastName = lastName;
               }
               if (password) {
-                user.password = password;
+                user.firstName = password;
               }
               //> store the data in database
               data.update("users", phoneNum, user, (err) => {
