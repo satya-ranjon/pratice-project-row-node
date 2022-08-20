@@ -1,18 +1,17 @@
 /*
- * Title: user Handler
- * Description: user Handler
+ * Title: check Handler
+ * Description: check Handler
  * Author: Satya Ranjon
- * Date : 18/08/2022
+ * Date : 20/08/2022
  */
-
-//  @ dependencies
+//  ?  dependencies
 const { read, create } = require("../../lib/data");
 const data = require("../../lib/data");
 const { hash } = require("../../helpers/utiities");
 const { parseJSON } = require("../../helpers/utiities");
 const tokenHandler = require("./tokenHandler");
 
-// module scaffolding
+// ? module scaffolding
 const handler = {};
 
 handler.userHandler = (requestProperties, callback) => {

@@ -1,18 +1,17 @@
 /*
- * Title: user Handler
- * Description: user Handler
+ * Title: check Handler
+ * Description: check Handler
  * Author: Satya Ranjon
- * Date : 18/08/2022
+ * Date : 20/08/2022
  */
-
-//  @ dependencies
+//  ?  dependencies
 const { read, create } = require("../../lib/data");
 const data = require("../../lib/data");
 const { hash } = require("../../helpers/utiities");
 const { parseJSON } = require("../../helpers/utiities");
 const tokenHandler = require("./tokenHandler");
 
-// module scaffolding
+// ? module scaffolding
 const handler = {};
 
 handler.userHandler = (requestProperties, callback) => {
@@ -205,50 +204,6 @@ handler._users.put = (requestProperties, callback) => {
 };
 
 // ! delete user info
-handler._users.delete = (requestProperties, callback) => {
-  const phoneNum =
-    typeof requestProperties.queryStringObject.phoneNum === "string" &&
-    requestProperties.queryStringObject.phoneNum.trim().length === 11
-      ? requestProperties.queryStringObject.phoneNum
-      : false;
-
-  if (phoneNum) {
-    // ? token verify
-    const token =
-      typeof requestProperties.headerObject.token === "string"
-        ? requestProperties.headerObject.token
-        : false;
-    tokenHandler._token.verify(token, phoneNum, (tokenId) => {
-      if (tokenId) {
-        // lookup the user
-        read("users", phoneNum, (err, userData) => {
-          if (!err && userData) {
-            data.delete("users", phoneNum, (err) => {
-              if (!err) {
-                callback(200, {
-                  message: "User was successfully deleted !",
-                });
-              } else {
-                callback(500, { error: "There was a server side error !" });
-              }
-            });
-          } else {
-            callback(500, {
-              error: "There was a server side error!",
-            });
-          }
-        });
-      } else {
-        callback(403, {
-          error: "Authentication failure!",
-        });
-      }
-    });
-  } else {
-    callback(404, {
-      error: "Requested user was not found!",
-    });
-  }
-};
+handler._users.delete = (requestProperties, callback) => {};
 
 module.exports = handler;

@@ -23,7 +23,6 @@ environments.production = {
   port: 5000,
   envName: "production",
   secretKey: "aasdfsfeskasalfdsl",
-  maxChecks: 5,
 };
 
 // determine which environment was passed
