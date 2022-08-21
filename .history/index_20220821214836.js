@@ -15,9 +15,7 @@ const app = {};
 
 // --> remove later
 const { sendTwilioSms } = require("./helpers/notifications");
-sendTwilioSms("01735293504", "Hello world", (err) => {
-  console.log(err);
-});
+sendTwilioSms("01746958641", "Hello world");
 // configuration
 
 // create server
