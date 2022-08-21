@@ -1,0 +1,16 @@
+{
+  "name": "Project-First",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "SET NODE_ENV=staging && nodemon index",
+    "production": "SET NODE_ENV=production && nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  }
+}
